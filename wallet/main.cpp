@@ -1032,7 +1032,7 @@ int64_t GetProofOfWorkReward(int64_t nFees)
             if(nBestHeight == 0)
             {
                 //Total premine coin, after the first 100 blocks are mined there will be a total of 42,500,099
-                nSubsidy = 4250000 * COIN;
+                nSubsidy = 42500000 * COIN;
             }
                 //No reward after initial PoW blocks
             if(nBestHeight > 100)
