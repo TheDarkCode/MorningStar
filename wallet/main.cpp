@@ -43,12 +43,12 @@ CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 20);
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 
 unsigned int nTargetSpacing = 2 * 60; //Block spacing 2 minutes
-unsigned int nStakeMinAge = 2 * 60 * 60; //Minimum stake age 2 hours
-unsigned int nStakeMaxAge = 24 * 60 * 60; //Maximum stake age 1 day
+unsigned int nStakeMinAge = 15 * 60; //Minimum stake age 15 min
+unsigned int nStakeMaxAge = 45 * 60; //Maximum stake age 45 min
 unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
 
-//static const int64_t nTargetTimespan = 16 * 60;  // 16 mins
-static const int64_t nTargetTimespan = 1 * 60 * 60;  // 1 hour
+static const int64_t nTargetTimespan = 16 * 60;  // 16 mins
+
 
 int nCoinbaseMaturity = 30; //Coin Base Maturity
 CBlockIndex* pindexGenesisBlock = NULL;
@@ -1026,16 +1026,16 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int64_t nFees)
 {
-            //Miner reward: 1 coin for 99 Blocks = 99 coins
+            //Miner reward: 1 coin for 9 Blocks = 9 coins
             int64_t nSubsidy = 1 * COIN;
 
             if(nBestHeight == 0)
             {
-                //Total premine coin, after the first 100 blocks are mined there will be a total of 42,500,099
+                //Total premine coin, after the first 100 blocks are mined there will be a total of 42,500,009
                 nSubsidy = 42500000 * COIN;
             }
                 //No reward after initial PoW blocks
-            if(nBestHeight > 100)
+            if(nBestHeight > 10)
             {
                 nSubsidy = 0;
 
