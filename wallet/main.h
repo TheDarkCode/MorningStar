@@ -28,7 +28,7 @@ class CNode;
 
 class CTxMemPool;
 
-static const int LAST_POW_BLOCK = 100;// 100 PoW Blocks to kickstart
+static const int LAST_POW_BLOCK = 10;// 10 PoW Blocks to kickstart
 
 /** The maximum allowed size for a serialized block, in bytes (network rule) */
 static const unsigned int MAX_BLOCK_SIZE = 1000000;
