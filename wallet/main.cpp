@@ -50,7 +50,7 @@ unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier 
 static const int64_t nTargetTimespan = 16 * 60;  // 16 mins
 
 
-int nCoinbaseMaturity = 30; //Coin Base Maturity
+int nCoinbaseMaturity = 20; //Coin Base Maturity
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 
