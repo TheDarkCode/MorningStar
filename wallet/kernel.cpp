@@ -12,12 +12,17 @@ using namespace std;
 typedef std::map<int, unsigned int> MapModifierCheckpoints;
 
 // Hard checkpoints of stake modifiers to ensure they are deterministic
-static std::map<int, unsigned int> mapStakeModifierCheckpoints;
-
+static std::map<int, unsigned int> mapStakeModifierCheckpoints =
+    boost::assign::map_list_of
+        ( 0,    0e00670b ) // genesis
+    ;
 
 // Hard checkpoints of stake modifiers to ensure they are deterministic (testNet)
-static std::map<int, unsigned int> mapStakeModifierCheckpointsTestNet;
-
+static std::map<int, unsigned int> mapStakeModifierCheckpoints =
+    boost::assign::map_list_of
+        ( 0,    0e00670b ) // genesis
+    ;
+    
 // Get time weight
 int64_t GetWeight(int64_t nIntervalBeginning, int64_t nIntervalEnd)
 {
