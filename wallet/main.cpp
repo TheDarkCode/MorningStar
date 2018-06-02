@@ -1026,16 +1026,16 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int64_t nFees)
 {
-            //Miner reward: 1 coin for 9 Blocks = 9 coins
+            //Miner reward: 1 coin for 100 Blocks = 100 coins
             int64_t nSubsidy = 1 * COIN;
 
             if(nBestHeight == 0)
             {
-                //Total premine coin, after the first 100 blocks are mined there will be a total of 42,500,009
+                //Total premine coin, after the first 100 blocks are mined there will be a total of 42,500,100
                 nSubsidy = 42500000 * COIN;
             }
                 //No reward after initial PoW blocks
-            if(nBestHeight > 10)
+            if(nBestHeight > 100)
             {
                 nSubsidy = 0;
 
