@@ -37,8 +37,8 @@ set<pair<COutPoint, unsigned int> > setStakeSeen;
 libzerocoin::Params* ZCParams;
 
 // Set PoW difficulty to standard
-CBigNum bnProofOfWorkLimit(~uint256(0) >> 20);
-CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 20);
+CBigNum bnProofOfWorkLimit(~uint256(0) >> 1);
+CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 1);
 // Set PoS difficulty to standard
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 
