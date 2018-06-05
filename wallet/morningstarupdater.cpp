@@ -8,7 +8,7 @@
 #include <boost/algorithm/string.hpp>
 
 const std::string MorningStarUpdater::ClientVersionSrcFileLink  = "https://raw.githubusercontent.com/MorningStarDev/MorningStar/master/wallet/clientversion.h";
-const std::string MorningStarUpdater::ReleasesInfoURL = "https://api.github.com/repos/MorningStarDev/MorningStar/releases";
+const std::string MorningStarUpdater::ReleasesInfoURL = "https://github.com/MorningStarDev/MorningStar/releases/latest";
 const std::string MorningStarUpdater::LatestReleaseURL = "https://github.com/MorningStarDev/MorningStar/releases/latest";
 
 MorningStarUpdater::MorningStarUpdater()
